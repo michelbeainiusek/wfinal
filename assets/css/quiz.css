@@ -1,0 +1,81 @@
+body { /* default text font*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #040b14;
+}
+a{ /* no underline */
+    text-decoration: none;
+}
+.container { 
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid white;/* white border */
+    border-radius: 5px;
+    background-color: #040b14;
+    color: white; 
+}
+h2 {
+    text-align: center;
+}
+.question {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #007bff; /* blue botton */
+    color: #fff; /* white text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.result {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.navbar{
+    position: sticky;
+    position: -webkit-sticky;
+    display: flex;
+    top: 0;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #040b1465; /* navbar color background */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+
+.navbar ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    justify-content: start;
+    gap: 20px;
+    align-items: center;
+}
+.navbar li{
+    padding: 10px 20px;
+}
+.navbar li:hover{
+    background-color: #149ddd; /* blue hover */
+    padding: auto;
+    border-radius: 50px;
+    padding: 10px 20px;
+}
+.navbar li a{
+    font-size: 18px;
+    color: white;
+}

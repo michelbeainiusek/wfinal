@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
+    <link href="/assets/css/quiz.css" rel="stylesheet">
+    <title>Quiz</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="profile"></div>
+        <ul>
+            <li><a href="/index.html">Link Tree</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Quiz</h2>
+        <form method="POST" action="quiz.php" id="quizForm">
+            <div class="question">
+                <p>1. What is the capital of France?</p>
+                <label><input type="radio" name="q1" value="a"> a) London</label>
+                <label><input type="radio" name="q1" value="b"> b) Paris</label>
+                <label><input type="radio" name="q1" value="c"> c) Berlin</label>
+            </div>
+            <div class="question">
+                <p>2. What is the largest planet in our solar system?</p>
+                <label><input type="radio" name="q2" value="a"> a) Earth</label>
+                <label><input type="radio" name="q2" value="b"> b) Jupiter</label>
+                <label><input type="radio" name="q2" value="c"> c) Mars</label>
+            </div> 
+            <div class="question"> 
+                <p>3. Who wrote 'Romeo and Juliet'?</p> 
+                <label><input type="radio" name="q3" value="a"> a) William Shakespeare</label>
+                <label><input type="radio" name="q3" value="b"> b) Charles Dickens</label>
+                <label><input type="radio" name="q3" value="c"> c) Jane Austen</label>
+            </div>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+
+
+

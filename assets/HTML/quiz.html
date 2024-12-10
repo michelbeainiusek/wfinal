@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
+    <link href="/assets/css/quiz.css" rel="stylesheet">
+    <title>Quiz</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="">
+            
+        </div>
+        <ul>
+            <li><a href="/index.html">Link Tree</a></li>
+        </ul>
+    </nav>
+<div class="container">
+    <h2>Quiz</h2>
+    <form id="quizForm">
+        <div class="question">
+            <p>1. What is the capital of France?</p>
+            <label><input type="radio" name="q1" value="a"> a) London</label>
+            <label><input type="radio" name="q1" value="b"> b) Paris</label>
+            <label><input type="radio" name="q1" value="c"> c) Berlin</label>
+        </div>
+        <div class="question">
+            <p>2. What is the largest planet in our solar system?</p>
+            <label><input type="radio" name="q2" value="a"> a) Earth</label>
+            <label><input type="radio" name="q2" value="b"> b) Jupiter</label>
+            <label><input type="radio" name="q2" value="c"> c) Mars</label>
+        </div> 
+        <div class="question"> 
+            <p>3. Who wrote 'Romeo and Juliet'?</p> 
+            <label><input type="radio" name="q3" value="a"> a) William Shakespeare</label>
+            <label><input type="radio" name="q3" value="b"> b) Charles Dickens</label>
+            <label><input type="radio" name="q3" value="c"> c) Jane Austen</label>
+        </div>
+        <button type="submit" class="submit-button">Submit</button>
+    </form>
+    <div id="result" class="result"></div> <!--where result will be printed-->
+</div>
+
+<script>
+    document.getElementById('quizForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // prevent send to php
+        let score = 0;
+        const answers = { //answers assosiative object
+            q1: 'b',
+            q2: 'b',
+            q3: 'a'
+        };
+
+        const formData = new FormData(this); //formdata extract all data from quizform
+        for (let [question, answer] of formData) { //loop and name key and values of formdata
+            if (answer === answers[question]) { //check if formdata value of object matches data for same question
+                score++;
+            }
+        }
+
+        const totalQuestions = Object.keys(answers).length; //
+        const percentage = (score / totalQuestions) * 100;
+        const resultText = `You scored ${score} out of ${totalQuestions}. Your grade is ${percentage.toFixed(2)}%.`;
+
+        document.getElementById('result').innerText = resultText; // print in result
+    });
+</script>
+
+</body>
+</html>

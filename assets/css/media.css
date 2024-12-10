@@ -1,0 +1,150 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a2e;/*black background*/
+    color: #fff;/*white text*/
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: rgba(10, 25, 47, 0.85);/*black*/
+    backdrop-filter: blur(10px);
+}
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 4px solid #2c2f3f; /*dark grey border*/
+}
+.profile h1 a {
+    font-size: 24px;
+    color: #fff; /*white link*/
+    text-decoration: none;
+}
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+.navbar li {
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+}
+.navbar li:hover {
+    background-color: #0a9dff; /*blue hover*/
+}
+.navbar li a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/* Sections */
+.head {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #0a0c1c; /*black background*/
+}
+.head h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+.head p {
+    font-size: 18px;
+    color: #aaa; /*grey text p*/
+}
+
+.cont {
+    padding: 40px 20px;
+    text-align: center;
+}
+.cont h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #0a9dff; /*blue h2 */
+}
+
+/* Multimedia Boxes */
+.box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* as many column as possible  */
+    gap: 20px;
+    justify-items: center; /*put items horizontally */
+    align-items: center; /* align center */
+}
+
+/* Media Elements */
+video, audio {
+    width: 100%;
+    max-width: 320px;
+    border: 3px solid #0a9dff;/*blue border*/
+    border-radius: 10px;
+    background-color: #2c2f3f; /*black background */
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #0a9dff; /*blue border*/
+    border-radius: 10px;
+}
+
+/* Buttons */
+.cta-button {
+    display: inline-block;
+    background-color: #0a9dff; /*blue background*/
+    color: #fff; /*white text button*/
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.cta-button:hover {
+    background-color: #076eb6; /*blue hover*/
+}
+
+/* Footer */
+.foot {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: rgba(10, 25, 47, 0.95); /*black*/
+    color: #aaa; /*grey*/
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column; /*put them on sam */
+        gap: 10px;
+    }
+   
+    .head h1 {
+        font-size: 28px;
+    }
+    .head p {
+        font-size: 16px;
+    }
+}
